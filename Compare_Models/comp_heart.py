@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, recall_score
 
-# Sửa đường dẫn để đi ra ngoài thư mục Compare_Models
+
 path = os.path.join(os.path.dirname(__file__), "..", "dataset", "heart.csv")
 data = pd.read_csv(path)
 

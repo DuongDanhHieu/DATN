@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, recall_score
 
-# Đường dẫn đến file ĐÃ LÀM SẠCH
+
 path = os.path.join(os.path.dirname(__file__), "..", "cleaned_data", "kidney_cleaned.csv")
 
 if not os.path.exists(path):
@@ -16,7 +16,7 @@ if not os.path.exists(path):
 else:
     data = pd.read_csv(path)
 
-    # Trong file cleaned, cột kết quả tên là 'class'
+
     X = data.drop(columns='class', axis=1)
     y = data['class']
 

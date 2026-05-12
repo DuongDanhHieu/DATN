@@ -376,7 +376,7 @@ if selected == 'Trợ lý AI sức khỏe':
     st.title("🤖 Trợ lý Sức khỏe AI")
     st.markdown("---")
 
-    # Đổi sang model qwen2:1.5b để tiếng Việt chuẩn hơn
+
     AI_MODEL = "qwen2:1.5b"
 
     if "messages" not in st.session_state:
@@ -396,7 +396,7 @@ if selected == 'Trợ lý AI sức khỏe':
             full_response = ""
 
             try:
-                # 1. Chỉ lấy tối đa 5 tin nhắn gần nhất để tránh nhiễu model nhỏ
+
                 recent_messages = st.session_state.messages[-5:]
 
                 response = ollama.chat(
@@ -419,11 +419,11 @@ if selected == 'Trợ lý AI sức khỏe':
                     ],
                     stream=True,
                     options={
-                        'temperature': 0.2,       # Giảm xuống 0.2 để cực kỳ nghiêm túc, tránh sáng tạo linh tinh
+                        'temperature': 0.2,
                         'top_p': 0.8,
-                        'repeat_penalty': 1.2,    # QUAN TRỌNG: Ngăn chặn việc lặp lại từ và ý (1.1 - 1.5 là ổn)
-                        'presence_penalty': 0.6,  # Khuyến khích model đưa ra ý mới
-                        'num_ctx': 2048,          # Giới hạn ngữ cảnh để model tập trung
+                        'repeat_penalty': 1.2,
+                        'presence_penalty': 0.6,
+                        'num_ctx': 2048,
                     }
                 )
 

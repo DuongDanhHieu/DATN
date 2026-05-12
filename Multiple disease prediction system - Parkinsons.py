@@ -12,7 +12,7 @@ import pickle
 
 parkinsons_data = pd.read_csv("dataset/parkinsons.csv")
 
-# XÓA CỘT TEXT NGAY TỪ ĐẦU (QUAN TRỌNG)
+# XÓA CỘT TEXT NGAY TỪ ĐẦU
 parkinsons_data.drop(columns='name', inplace=True)
 
 # xem nhanh dữ liệu
@@ -99,7 +99,7 @@ filename = "saved_models/parkinsons_model.sav"
 pickle.dump(model, open(filename, "wb"))
 
 # =========================
-# Load Model (test lại)
+# Load Model
 # =========================
 
 loaded_model = pickle.load(

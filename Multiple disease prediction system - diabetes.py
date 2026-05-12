@@ -6,8 +6,7 @@ from sklearn import svm
 from sklearn.metrics import accuracy_score
 
 # Data Collection and Analysis
-# 
-# PIMA Diabetes Dataset
+
 
 # loading the diabetes dataset to a pandas DataFrame
 diabetes_dataset = pd.read_csv("dataset/diabetes.csv")
